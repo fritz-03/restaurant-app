@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: FF6347;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fritz.app.Controller">
+    <children>
+        <Label layoutX="192.0" layoutY="9.0" prefHeight="53.0" prefWidth="431.0" text="Pizza &amp; Burger Restaurant" textFill="WHITE">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutY="62.0" prefHeight="539.0" prefWidth="800.0" style="-fx-background-color: FFFFFF;">
+            <children>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="539.0" prefWidth="800.0">
+                    <children>
+                        <AnchorPane layoutX="18.0" layoutY="36.0" prefHeight="427.0" prefWidth="530.0" style="-fx-background-color: FF6347;">
+                            <children>
+                                <ScrollPane prefHeight="428.0" prefWidth="538.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="617.0" prefWidth="521.0">
+                                            <children>
+                                                <TabPane prefHeight="620.0" prefWidth="541.0" tabClosingPolicy="UNAVAILABLE">
+                                                    <tabs>
+                                                        <Tab text="Pizza">
+                                                            <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="517.0" prefWidth="541.0">
+                                                                    <children>
+                                                                        <VBox layoutX="-2.0" prefHeight="600.0" prefWidth="528.0">
+                                                                            <children>
+                                                                                <Pane prefHeight="50.0" prefWidth="525.0" style="-fx-background-color: FF6347;">
+                                                                                    <children>
+                                                                                        <Label layoutX="14.0" layoutY="-11.0" prefHeight="72.0" prefWidth="452.0" text="What kind of crust would you like:" textFill="WHITE">
+                                                                                            <font>
+                                                                                                <Font size="20.0" />
+                                                                                            </font>
+                                                                                        </Label>
+                                                                                    </children>
+                                                                                </Pane>
+                                                                                <Pane prefHeight="70.0" prefWidth="520.0">
+                                                                                    <children>
+                                                                                        <RadioButton fx:id="thickCrustRadioButton" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#setCrustChoice" text="\$1.20 - Thick Crust">
+                                                                                            <font>
+                                                                                                <Font size="20.0" />
+                                                                                            </font>
+                                                                                            <toggleGroup>
+                                                                                                <ToggleGroup fx:id="crust" />
+                                                                                            </toggleGroup>
+                                                                                        </RadioButton>
+                                                                                        <RadioButton fx:id="thinCrustRadioButton" layoutX="242.0" layoutY="10.0" mnemonicParsing="false" onAction="#setCrustChoice" text="\$0.75 - Thin Crust" toggleGroup="$crust">
+                                                                                            <font>
+                                                                                                <Font size="20.0" />
+                                                                                            </font>
+                                                                                        </RadioButton>
+                                                                  <CheckBox fx:id="isDeepDishCheck" layoutX="82.0" layoutY="40.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="92.0" text="Deep dish?" />
+                                                                                    </children>
+                                                                                </Pane>
+                                                                                <Pane prefHeight="50.0" prefWidth="525.0" style="-fx-background-color: FF6347;">
+                                                                                    <children>
+                                                                                        <Label layoutX="14.0" layoutY="-11.0" prefHeight="72.0" prefWidth="452.0" text="Select dough type:" textFill="WHITE">
+                                                                                            <font>
+                                                                                                <Font size="20.0" />
+                                                                                            </font>
+                                                                                        </Label>
+                                                                                    </children>
+                                                                                </Pane>
+                                                                                <Pane prefHeight="70.0" prefWidth="530.0">
+                                                                                    <children>
+                                                                                        <RadioButton fx:id="flourRadioButton" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#setCrustChoice" text="\$0.00 - Flour">
+                                                                                            <font>
+                                                                                                <Font size="20.0" />
+                                                                                            </font>
+                                                                                            <toggleGroup>
+                                                                                                <ToggleGroup fx:id="dough" />
+                                                                                            </toggleGroup>
+                                                                                        </RadioButton>
+                                                                                        <RadioButton fx:id="cauliflowerRadioButton" layoutX="245.0" layoutY="20.0" mnemonicParsing="false" onAction="#setCrustChoice" prefHeight="30.0" prefWidth="214.0" text="\$0.00 - Cauliflower" toggleGroup="$dough">
+                                                                                            <font>
+                                                                                                <Font size="20.0" />
+                                                                                            </font>
+                                                                                        </RadioButton>
+                                                                                    </children>
+                                                                                </Pane>
+                                                                                <Pane prefHeight="50.0" prefWidth="525.0" style="-fx-background-color: FF6347;">
+                                                                                    <children>
+                                                                                        <Label layoutX="14.0" layoutY="-11.0" prefHeight="72.0" prefWidth="452.0" text="What kind of sauce would you like:" textFill="WHITE">
+                                                                                            <font>
+                                                                                                <Font size="20.0" />
+                                                                                            </font>
+                                                                                        </Label>
+                                                                                    </children>
+                                                                                </Pane>
+                                                                                <Pane prefHeight="70.0" prefWidth="540.0">
+                                                                                    <children>
+                                                                                        <RadioButton fx:id="tomatoPizzaRadioButton" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#setSauceChoice" text="\$0.30 - Tomato">
+                                                                                            <font>
+                                                                                                <Font size="20.0" />
+                                                                                            </font>
+                                                                                            <toggleGroup>
+                                                                                                <ToggleGroup fx:id="sauce" />
+                                                                                            </toggleGroup>
+                                                                                        </RadioButton>
+                                                                                        <RadioButton fx:id="alfredoRadioButton" layoutX="244.0" layoutY="20.0" mnemonicParsing="false" onAction="#setSauceChoice" text="\$0.30 - Alfredo" toggleGroup="$sauce">
+                                                                                            <font>
+                                                                                                <Font size="20.0" />
+                                                                                            </font>
+                                                                                        </RadioButton>
+                                                                                    </children>
+                                                                                </Pane>
+                                                                                <Pane prefHeight="60.0" prefWidth="528.0" style="-fx-background-color: FF6347;">
+                                                                                    <children>
+                                                                                        <Label layoutX="14.0" layoutY="-3.0" prefHeight="50.0" prefWidth="451.0" text="Choose how many toppings you want to add:" textFill="WHITE">
+                                                                                            <font>
+                                                                                                <Font size="20.0" />
+                                                                                            </font>
+                                                                                        </Label>
+                                                                  <Label fx:id="addedToppingLabel" layoutX="14.0" layoutY="36.0" prefHeight="20.0" prefWidth="190.0" text="Total toppings added: 0" textFill="WHITE" />
+                                                                                    </children>
+                                                                                </Pane>
+                                                            <AnchorPane prefHeight="160.0" prefWidth="528.0">
+                                                               <children>
+                                                                  <RadioButton fx:id="pepperoniRadioButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#setToppingChoice" prefHeight="30.0" prefWidth="198.0" text="\$0.60 Pepperoni">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="mushroomRadioButton" layoutX="245.0" layoutY="14.0" mnemonicParsing="false" onAction="#setToppingChoice" text="\$0.50 Mushroom">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="sausageRadioButton" layoutX="14.0" layoutY="62.0" mnemonicParsing="false" onAction="#setToppingChoice" text="\$0.60 Sausage">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="mozzarellaRadioButton" layoutX="246.0" layoutY="62.0" mnemonicParsing="false" onAction="#setToppingChoice" text="\$0.20 Mozzarella">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="pepperRadioButton" layoutX="14.0" layoutY="115.0" mnemonicParsing="false" onAction="#setToppingChoice" text="\$0.50 Pepper">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="asiagoRadioButton" layoutX="246.0" layoutY="115.0" mnemonicParsing="false" onAction="#setToppingChoice" text="\$0.20 Asiago">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <Slider fx:id="pepperoniSpicinessSlider" layoutX="72.0" layoutY="45.0" max="10.0" prefHeight="14.0" prefWidth="112.0" />
+                                                                  <Label fx:id="pepperoniSpicinessText" layoutX="14.0" layoutY="44.0" text="Spiciness" />
+                                                                  <Slider fx:id="sausageSpicinessSlider" layoutX="72.0" layoutY="93.0" max="10.0" prefHeight="14.0" prefWidth="112.0" />
+                                                                  <Label fx:id="sausageSpicinessText" layoutX="14.0" layoutY="92.0" text="Spiciness" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                                            </children>
+                                                                        </VBox>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                            </content>
+                                                        </Tab>
+                                                        <Tab text="Burger">
+                                                            <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="608.0" prefWidth="541.0">
+                                                   <children>
+                                                      <VBox prefHeight="587.0" prefWidth="538.0">
+                                                         <children>
+                                                            <Pane prefHeight="50.0" prefWidth="525.0" style="-fx-background-color: FF6347;">
+                                                               <children>
+                                                                  <Label layoutX="14.0" layoutY="-11.0" prefHeight="72.0" prefWidth="452.0" text="What kind of bun would you like:" textFill="WHITE">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </Pane>
+                                                            <Pane prefHeight="95.0" prefWidth="538.0">
+                                                               <children>
+                                                                  <RadioButton fx:id="sesameSeedRadioButton" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#setBunChoice" text="\$0.50 - Sesame Seed">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                     <toggleGroup>
+                                                                        <ToggleGroup fx:id="bun" />
+                                                                     </toggleGroup>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="sourdoughRadioButton" layoutX="243.0" layoutY="8.0" mnemonicParsing="false" onAction="#setBunChoice" text="\$0.50 - Sourdough" toggleGroup="$bun">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="wholeWheatRadioButton" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#setBunChoice" text="\$0.50 - Whole Wheat" toggleGroup="$bun">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                               </children>
+                                                            </Pane>
+                                                            <Pane prefHeight="50.0" prefWidth="525.0" style="-fx-background-color: FF6347;">
+                                                               <children>
+                                                                  <Label layoutX="14.0" layoutY="-11.0" prefHeight="72.0" prefWidth="452.0" text="Select patty type:" textFill="WHITE">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </Pane>
+                                                            <Pane prefHeight="95.0" prefWidth="540.0">
+                                                               <children>
+                                                                  <RadioButton fx:id="beefRadioButton" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#setPattyChoice" prefHeight="30.0" prefWidth="219.0" text="\$1.50 - Beef">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                     <toggleGroup>
+                                                                        <ToggleGroup fx:id="patty" />
+                                                                     </toggleGroup>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="turkeyRadioButton" layoutX="242.0" layoutY="10.0" mnemonicParsing="false" onAction="#setPattyChoice" text="\$1.50 - Turkey" toggleGroup="$patty">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="chickenRadioButton" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#setPattyChoice" text="\$2.00 - Chicken" toggleGroup="$patty">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="brisketRadioButton" layoutX="242.0" layoutY="51.0" mnemonicParsing="false" onAction="#setPattyChoice" text="\$1.50 - Brisket" toggleGroup="$patty">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                               </children>
+                                                            </Pane>
+                                                            <Pane prefHeight="60.0" prefWidth="528.0" style="-fx-background-color: FF6347;">
+                                                               <children>
+                                                                  <Label layoutX="14.0" layoutY="-14.0" prefHeight="72.0" prefWidth="452.0" text="Choose how many cheese slices you want to add:" textFill="WHITE">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="addedCheeseLabel" layoutX="14.0" layoutY="34.0" prefHeight="20.0" prefWidth="174.0" text="Total slices added: 0" textFill="WHITE" />
+                                                               </children>
+                                                            </Pane>
+                                                            <Pane prefHeight="95.0" prefWidth="540.0">
+                                                               <children>
+                                                                  <RadioButton fx:id="americanRadioButton" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#setCheeseChoice" text="\$0.50 - American">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="cheddarRadioButton" layoutX="242.0" layoutY="10.0" mnemonicParsing="false" onAction="#setCheeseChoice" text="\$0.50 - Cheddar">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="swissRadioButton" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#setCheeseChoice" text="\$0.50 - Swiss">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="pepperJackRadioButton" layoutX="242.0" layoutY="48.0" mnemonicParsing="false" onAction="#setCheeseChoice" text="\$0.50 - Pepper Jack">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                               </children>
+                                                            </Pane>
+                                                            <Pane prefHeight="60.0" prefWidth="528.0" style="-fx-background-color: FF6347;">
+                                                               <children>
+                                                                  <Label layoutX="14.0" layoutY="-13.0" prefHeight="72.0" prefWidth="452.0" text="Choose how many garnishes you want to add:" textFill="WHITE">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="addedGarnishLabel" layoutX="14.0" layoutY="35.0" prefHeight="20.0" prefWidth="239.0" text="Total garnishes added: 0" textFill="WHITE" />
+                                                               </children>
+                                                            </Pane>
+                                                            <Pane prefHeight="95.0" prefWidth="540.0">
+                                                               <children>
+                                                                  <RadioButton fx:id="baconRadioButton" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#setGarnishChoice" text="\$1.60 - Bacon">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="pickleRadioButton" layoutX="242.0" layoutY="10.0" mnemonicParsing="false" onAction="#setGarnishChoice" text="\$1.30 - Pickle">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="lettuceRadioButton" layoutX="14.0" layoutY="48.0" mnemonicParsing="false" onAction="#setGarnishChoice" text="\$0.50- Lettuce">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="tomatoBurgerRadioButton" layoutX="242.0" layoutY="48.0" mnemonicParsing="false" onAction="#setGarnishChoice" text="\$0.70 - Tomato">
+                                                                     <font>
+                                                                        <Font size="20.0" />
+                                                                     </font>
+                                                                  </RadioButton>
+                                                               </children>
+                                                            </Pane>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </AnchorPane>
+                                                            </content>
+                                                        </Tab>
+                                                    </tabs>
+                                                </TabPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+                <Button layoutX="580.0" layoutY="163.0" mnemonicParsing="false" onAction="#setResetButton" prefHeight="50.0" prefWidth="198.0" text="Reset" />
+                <Button layoutX="580.0" layoutY="113.0" mnemonicParsing="false" onAction="#setAddBurgerButton" prefHeight="50.0" prefWidth="198.0" text="Add Burger" />
+                <Button layoutX="580.0" layoutY="63.0" mnemonicParsing="false" onAction="#setAddPizzaButton" prefHeight="50.0" prefWidth="198.0" text="Add Pizza" />
+                <Button layoutX="580.0" layoutY="383.0" mnemonicParsing="false" onAction="#showReceipt" prefHeight="50.0" prefWidth="198.0" text="Get Receipt" />
+                <AnchorPane layoutX="581.0" layoutY="213.0" prefHeight="170.0" prefWidth="176.0" style="-fx-background-color: FF6347;">
+                    <children>
+                        <Label layoutX="43.0" layoutY="6.0" text="Your orders" textFill="WHITE">
+                            <font>
+                                <Font size="21.0" />
+                            </font>
+                        </Label>
+                          <Label fx:id="pizzaOrder" alignment="TOP_LEFT" layoutX="-1.0" layoutY="44.0" prefHeight="59.0" prefWidth="198.0" style="-fx-background-color: f4f4f4;">
+                              <font>
+                                  <Font size="23.0" />
+                              </font>
+                          </Label>
+                  <Label fx:id="burgerOrder" alignment="TOP_LEFT" layoutX="-1.0" layoutY="102.0" prefHeight="68.0" prefWidth="198.0" style="-fx-background-color: f4f4f4;">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
